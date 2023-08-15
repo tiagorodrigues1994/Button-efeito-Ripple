@@ -1,0 +1,45 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.button {
+  padding: 60px 100px;
+  background-color: #282828;
+  border-radius: 120px;
+  color: #fff;
+  text-decoration: none;
+  position: relative;
+  overflow: hidden;
+}
+
+.button span {
+  font-size: 30px;
+  position: relative;
+}
+
+.button::before {
+  content: "";
+  background-color: #fe6600;
+  width: 0px;
+  height: 0px;
+  position: absolute;
+  border-radius: 50%;
+  top: var(--eixoY);
+  left: var(--eixoX);
+  transform: translate(-50%, -50%);
+  transition: width 0.3s, height 0.3s;
+}
+
+.button:hover::before{
+  width: 1000px;
+  height: 1000px;
+}
